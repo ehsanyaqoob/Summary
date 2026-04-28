@@ -32,6 +32,9 @@ void startAnimation() async {
     _goNextBasedOnAuth();
   }
 
+  // sanrizvi 
+  // admin@123
+
   Future<void> _goNextBasedOnAuth() async {
     try {
       final prefs = await SharedPreferences.getInstance();

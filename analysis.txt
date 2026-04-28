@@ -1,0 +1,166 @@
+Analyzing Summary...                                            
+
+warning • Unused import: 'dart:convert' • lib/core/services/api_services.dart:1:8 • unused_import
+warning • Unused import: 'package:http/http.dart' • lib/core/services/api_services.dart:2:8 • unused_import
+warning • Unused import: 'package:trafficlly/core/utils/export.dart' • lib/core/utils/constants.dart:1:8 • unused_import
+  error • Target of URI doesn't exist: 'package:trafficlly/features/home/controllers/traffic_controller.dart' • lib/core/utils/export.dart:14:8 • uri_does_not_exist
+  error • Target of URI doesn't exist: 'package:trafficlly/features/home/controllers/vehicle_controller.dart' • lib/core/utils/export.dart:15:8 • uri_does_not_exist
+  error • The name 'CustomText' is defined in the libraries 'package:trafficlly/core/widgets/custom_text_formfield.dart' and 'package:trafficlly/core/widgets/custom_text.dart' • lib/core/utils/export.dart:30:8 • ambiguous_export
+  error • The function 'CustomBottomSheet' isn't defined • lib/core/widgets/bottom_sheet.dart:67:5 • undefined_function
+   info • The import of 'package:flutter/material.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/core/widgets/challan_analysis_section.dart:2:8 • unnecessary_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/challan_analysis_section.dart:63:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/challan_analysis_section.dart:68:50 • deprecated_member_use
+   info • The import of 'package:flutter/material.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/core/widgets/challan_bar_chart.dart:2:8 • unnecessary_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/challan_bar_chart.dart:46:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/custom_appbar.dart:53:46 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/custom_appbar.dart:54:46 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/custom_appbar.dart:55:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/custom_button.dart:46:41 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/custom_button.dart:47:43 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/custom_button.dart:53:36 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/custom_button.dart:59:53 • deprecated_member_use
+  error • 'CustomText' isn't a function • lib/core/widgets/custom_button.dart:79:19 • invocation_of_non_function
+  error • The name 'CustomText' is defined in the libraries 'package:trafficlly/core/widgets/custom_text.dart (via package:trafficlly/core/utils/export.dart)' and 'package:trafficlly/core/widgets/custom_text_formfield.dart' • lib/core/widgets/custom_button.dart:79:19 • ambiguous_import
+  error • 'CustomText' isn't a function • lib/core/widgets/custom_generic_button.dart:46:13 • invocation_of_non_function
+  error • The name 'CustomText' is defined in the libraries 'package:trafficlly/core/widgets/custom_text.dart (via package:trafficlly/core/utils/export.dart)' and 'package:trafficlly/core/widgets/custom_text_formfield.dart' • lib/core/widgets/custom_generic_button.dart:46:13 • ambiguous_import
+   info • The import of 'dart:async' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/core/widgets/custom_lock_dialog.dart:1:8 • unnecessary_import
+   info • 'groupValue' is deprecated and shouldn't be used. Use a RadioGroup ancestor to manage group value instead. This feature was deprecated after v3.32.0-0.0.pre • lib/core/widgets/custom_radio_button.dart:84:23 • deprecated_member_use
+   info • 'onChanged' is deprecated and shouldn't be used. Use RadioGroup to handle value change instead. This feature was deprecated after v3.32.0-0.0.pre • lib/core/widgets/custom_radio_button.dart:85:23 • deprecated_member_use
+   info • The import of 'package:trafficlly/core/utils/fonts.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/core/widgets/custom_text.dart:3:8 • unnecessary_import
+  error • Target of URI doesn't exist: '../utills/fonts.dart' • lib/core/widgets/custom_text_formfield.dart:5:8 • uri_does_not_exist
+warning • This class (or a class that this class inherits from) is marked as '@immutable', but one or more of its instance fields aren't final: TextFieldIcon.icon, TextFieldIcon.color • lib/core/widgets/custom_text_formfield.dart:231:7 • must_be_immutable
+  error • Target of URI doesn't exist: '../utills/colors.dart' • lib/core/widgets/customtabs.dart:4:8 • uri_does_not_exist
+  error • Undefined name 'AppColors' • lib/core/widgets/customtabs.dart:41:38 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/core/widgets/customtabs.dart:41:57 • undefined_identifier
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/customtabs.dart:51:45 • deprecated_member_use
+  error • Undefined name 'AppColors' • lib/core/widgets/customtabs.dart:56:47 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/core/widgets/customtabs.dart:104:18 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/core/widgets/customtabs.dart:110:18 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/core/widgets/customtabs.dart:126:18 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/core/widgets/customtabs.dart:142:18 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/core/widgets/customtabs.dart:158:18 • undefined_identifier
+  error • 'CustomText' isn't a function • lib/core/widgets/home_bar_widget.dart:25:15 • invocation_of_non_function
+  error • The name 'CustomText' is defined in the libraries 'package:trafficlly/core/widgets/custom_text.dart (via package:trafficlly/core/utils/export.dart)' and 'package:trafficlly/core/widgets/custom_text_formfield.dart' • lib/core/widgets/home_bar_widget.dart:25:15 • ambiguous_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/home_bar_widget.dart:68:52 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/core/widgets/info_card.dart:34:33 • deprecated_member_use
+  error • 'CustomText' isn't a function • lib/core/widgets/info_card.dart:46:9 • invocation_of_non_function
+  error • The name 'CustomText' is defined in the libraries 'package:trafficlly/core/widgets/custom_text.dart (via package:trafficlly/core/utils/export.dart)' and 'package:trafficlly/core/widgets/custom_text_formfield.dart' • lib/core/widgets/info_card.dart:46:9 • ambiguous_import
+  error • 'CustomText' isn't a function • lib/core/widgets/info_card.dart:54:9 • invocation_of_non_function
+  error • The name 'CustomText' is defined in the libraries 'package:trafficlly/core/widgets/custom_text.dart (via package:trafficlly/core/utils/export.dart)' and 'package:trafficlly/core/widgets/custom_text_formfield.dart' • lib/core/widgets/info_card.dart:54:9 • ambiguous_import
+  error • 'CustomText' isn't a function • lib/core/widgets/npf_bottomsheet.dart:34:22 • invocation_of_non_function
+  error • The name 'CustomText' is defined in the libraries 'package:trafficlly/core/widgets/custom_text.dart (via package:trafficlly/core/utils/export.dart)' and 'package:trafficlly/core/widgets/custom_text_formfield.dart' • lib/core/widgets/npf_bottomsheet.dart:34:22 • ambiguous_import
+  error • 'CustomText' isn't a function • lib/core/widgets/npf_bottomsheet.dart:69:11 • invocation_of_non_function
+  error • The name 'CustomText' is defined in the libraries 'package:trafficlly/core/widgets/custom_text.dart (via package:trafficlly/core/utils/export.dart)' and 'package:trafficlly/core/widgets/custom_text_formfield.dart' • lib/core/widgets/npf_bottomsheet.dart:69:11 • ambiguous_import
+   info • The import of 'package:flutter/material.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/core/widgets/shimmer.dart:1:8 • unnecessary_import
+  error • Target of URI doesn't exist: '../utills/export.dart' • lib/features/auth/controllers/auth_controller.dart:3:8 • uri_does_not_exist
+  error • Target of URI doesn't exist: '../screens/login_view.dart' • lib/features/auth/controllers/auth_controller.dart:5:8 • uri_does_not_exist
+  error • Classes can only extend other classes • lib/features/auth/controllers/auth_controller.dart:12:32 • extends_non_class
+  error • The getter 'obs' isn't defined for the type 'bool' • lib/features/auth/controllers/auth_controller.dart:13:24 • undefined_getter
+  error • The getter 'obs' isn't defined for the type 'bool' • lib/features/auth/controllers/auth_controller.dart:14:25 • undefined_getter
+warning • The method doesn't override an inherited method • lib/features/auth/controllers/auth_controller.dart:16:8 • override_on_non_overriding_member
+  error • The method 'onInit' isn't defined in a superclass of 'SplashController' • lib/features/auth/controllers/auth_controller.dart:17:11 • undefined_super_member
+  error • Undefined name 'Get' • lib/features/auth/controllers/auth_controller.dart:42:9 • undefined_identifier
+  error • The method 'HomeView' isn't defined for the type 'SplashController' • lib/features/auth/controllers/auth_controller.dart:42:26 • undefined_method
+  error • Undefined name 'Transition' • lib/features/auth/controllers/auth_controller.dart:43:25 • undefined_identifier
+  error • Undefined name 'Get' • lib/features/auth/controllers/auth_controller.dart:47:9 • undefined_identifier
+  error • The method 'LoginView' isn't defined for the type 'SplashController' • lib/features/auth/controllers/auth_controller.dart:47:26 • undefined_method
+  error • Undefined name 'Transition' • lib/features/auth/controllers/auth_controller.dart:48:25 • undefined_identifier
+  error • Undefined name 'Get' • lib/features/auth/controllers/auth_controller.dart:53:7 • undefined_identifier
+  error • The method 'HomeView' isn't defined for the type 'SplashController' • lib/features/auth/controllers/auth_controller.dart:53:24 • undefined_method
+  error • Undefined name 'Transition' • lib/features/auth/controllers/auth_controller.dart:54:23 • undefined_identifier
+  error • Classes can only extend other classes • lib/features/auth/controllers/auth_controller.dart:60:31 • extends_non_class
+  error • The getter 'obs' isn't defined for the type 'bool' • lib/features/auth/controllers/auth_controller.dart:61:24 • undefined_getter
+  error • The getter 'obs' isn't defined for the type 'bool' • lib/features/auth/controllers/auth_controller.dart:62:30 • undefined_getter
+  error • Undefined name 'AppColors' • lib/features/auth/controllers/auth_controller.dart:82:26 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/features/auth/controllers/auth_controller.dart:83:20 • undefined_identifier
+  error • The getter 'sp' isn't defined for the type 'double' • lib/features/auth/controllers/auth_controller.dart:84:24 • undefined_getter
+  error • The method 'TimeoutException' isn't defined for the type 'LoginController' • lib/features/auth/controllers/auth_controller.dart:116:21 • undefined_method
+  error • Undefined name 'Colors' • lib/features/auth/controllers/auth_controller.dart:148:28 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/features/auth/controllers/auth_controller.dart:149:22 • undefined_identifier
+  error • The getter 'sp' isn't defined for the type 'double' • lib/features/auth/controllers/auth_controller.dart:150:26 • undefined_getter
+  error • Undefined name 'Get' • lib/features/auth/controllers/auth_controller.dart:154:9 • undefined_identifier
+  error • The method 'HomeView' isn't defined for the type 'LoginController' • lib/features/auth/controllers/auth_controller.dart:155:17 • undefined_method
+  error • Undefined name 'Transition' • lib/features/auth/controllers/auth_controller.dart:156:23 • undefined_identifier
+  error • Undefined name 'Colors' • lib/features/auth/controllers/auth_controller.dart:172:30 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/features/auth/controllers/auth_controller.dart:173:24 • undefined_identifier
+  error • The getter 'sp' isn't defined for the type 'double' • lib/features/auth/controllers/auth_controller.dart:174:28 • undefined_getter
+  error • Undefined name 'Colors' • lib/features/auth/controllers/auth_controller.dart:184:30 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/features/auth/controllers/auth_controller.dart:185:24 • undefined_identifier
+  error • The getter 'sp' isn't defined for the type 'double' • lib/features/auth/controllers/auth_controller.dart:186:28 • undefined_getter
+  error • Undefined name 'Colors' • lib/features/auth/controllers/auth_controller.dart:198:26 • undefined_identifier
+  error • Undefined name 'AppColors' • lib/features/auth/controllers/auth_controller.dart:199:20 • undefined_identifier
+  error • The getter 'sp' isn't defined for the type 'double' • lib/features/auth/controllers/auth_controller.dart:200:24 • undefined_getter
+   info • The import of 'package:get/get.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/features/auth/views/login_view.dart:5:8 • unnecessary_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/views/splash_view.dart:20:33 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/auth/views/splash_view.dart:21:38 • deprecated_member_use
+  error • Target of URI doesn't exist: 'package:trafficlly/screens/details_views/total_challans.dart' • lib/features/challans/controllers/hourly_controller.dart:3:8 • uri_does_not_exist
+  error • Target of URI doesn't exist: 'package:trafficlly/screens/details_views/total_driving_licences.dart' • lib/features/challans/controllers/hourly_controller.dart:4:8 • uri_does_not_exist
+  error • The method 'TotalChallansView' isn't defined for the type 'HourlyDetailsController' • lib/features/challans/controllers/hourly_controller.dart:25:16 • undefined_method
+  error • The method 'TotalDrivingLicencesView' isn't defined for the type 'HourlyDetailsController' • lib/features/challans/controllers/hourly_controller.dart:32:16 • undefined_method
+  error • Target of URI doesn't exist: '../utills/export.dart' • lib/features/challans/models/hourly_model.dart:1:8 • uri_does_not_exist
+  error • Undefined class 'Color' • lib/features/challans/models/hourly_model.dart:7:9 • undefined_class
+  error • Undefined class 'Widget' • lib/features/challans/models/hourly_model.dart:8:9 • undefined_class
+  error • Undefined name 'Colors' • lib/features/challans/models/hourly_model.dart:24:13 • undefined_identifier
+  error • Undefined name 'Colors' • lib/features/challans/models/hourly_model.dart:25:13 • undefined_identifier
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challan_amount_view.dart:95:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challan_amount_view.dart:96:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challan_amount_view.dart:102:57 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challan_amount_view.dart:138:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challan_amount_view.dart:149:38 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challan_amount_view.dart:164:50 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challan_amount_view.dart:198:34 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challan_amount_view.dart:257:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challan_amount_view.dart:268:28 • deprecated_member_use
+   info • The import of 'package:flutter/material.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/features/challans/views/total_challans_view.dart:1:8 • unnecessary_import
+   info • The import of 'package:get/get.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/features/challans/views/total_challans_view.dart:2:8 • unnecessary_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challans_view.dart:67:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challans_view.dart:69:59 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challans_view.dart:108:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challans_view.dart:120:38 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challans_view.dart:134:50 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challans_view.dart:159:34 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challans_view.dart:222:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/challans/views/total_challans_view.dart:233:28 • deprecated_member_use
+   info • The import of 'dart:async' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/features/dl/controllers/dl_controller.dart:1:8 • unnecessary_import
+   info • The import of 'package:get/get.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/features/dl/controllers/dl_controller.dart:4:8 • unnecessary_import
+warning • Unused import: 'package:flutter/material.dart' • lib/features/dl/controllers/dl_controller.dart:9:8 • unused_import
+   info • The import of 'package:flutter/material.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/features/dl/views/total_dl_amount_view.dart:1:8 • unnecessary_import
+   info • The import of 'package:get/get.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/features/dl/views/total_dl_amount_view.dart:2:8 • unnecessary_import
+   info • The import of 'package:trafficlly/features/dl/controllers/dl_controller.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/features/dl/views/total_dl_amount_view.dart:3:8 • unnecessary_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:96:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:97:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:103:57 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:141:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:152:38 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:168:50 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:203:34 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:265:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:276:28 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:383:22 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:385:41 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_amount_view.dart:392:28 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_view.dart:61:40 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_view.dart:63:59 • deprecated_member_use
+warning • The left operand can't be null, so the right operand is never executed • lib/features/dl/views/total_dl_view.dart:143:60 • dead_null_aware_expression
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_view.dart:150:35 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_view.dart:160:58 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_view.dart:163:55 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_view.dart:214:53 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_view.dart:220:58 • deprecated_member_use
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/dl/views/total_dl_view.dart:225:55 • deprecated_member_use
+  error • Target of URI doesn't exist: 'package:trafficlly/screens/details_views/total_challans.dart' • lib/features/home/controllers/dash_controller.dart:4:8 • uri_does_not_exist
+  error • Target of URI doesn't exist: 'package:trafficlly/screens/details_views/total_chllan_amount.dart' • lib/features/home/controllers/dash_controller.dart:5:8 • uri_does_not_exist
+  error • Target of URI doesn't exist: 'package:trafficlly/screens/details_views/total_dl_amount.dart' • lib/features/home/controllers/dash_controller.dart:6:8 • uri_does_not_exist
+  error • Target of URI doesn't exist: 'package:trafficlly/screens/details_views/total_driving_licences.dart' • lib/features/home/controllers/dash_controller.dart:7:8 • uri_does_not_exist
+  error • The method 'TotalChallansView' isn't defined for the type 'DashboardController' • lib/features/home/controllers/dash_controller.dart:13:99 • undefined_method
+  error • The method 'TotalDrivingLicencesView' isn't defined for the type 'DashboardController' • lib/features/home/controllers/dash_controller.dart:14:98 • undefined_method
+  error • The method 'TotalChallanAmount' isn't defined for the type 'DashboardController' • lib/features/home/controllers/dash_controller.dart:15:100 • undefined_method
+  error • The method 'TotalDlAmount' isn't defined for the type 'DashboardController' • lib/features/home/controllers/dash_controller.dart:16:112 • undefined_method
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/home/views/home_view.dart:44:44 • deprecated_member_use
+   info • 'WillPopScope' is deprecated and shouldn't be used. Use PopScope instead. The Android predictive back feature will not work with WillPopScope. This feature was deprecated after v3.12.0-1.0.pre • lib/features/home/views/home_view.dart:68:12 • deprecated_member_use
+  error • The name 'SummaryCards' isn't a class • lib/features/home/views/home_view.dart:98:23 • creation_with_non_type
+   info • The import of '../controllers/notify_controller.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/features/notifications/views/notifications_view.dart:4:8 • unnecessary_import
+   info • 'withOpacity' is deprecated and shouldn't be used. Use .withValues() to avoid precision loss • lib/features/notifications/views/notifications_view.dart:59:46 • deprecated_member_use
+   info • The import of 'package:trafficlly/features/dl/controllers/dl_controller.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/main.dart:5:8 • unnecessary_import
+   info • The import of 'package:trafficlly/features/challans/controllers/challans_controller.dart' is unnecessary because all of the used elements are also provided by the import of 'package:trafficlly/core/utils/export.dart' • lib/main.dart:6:8 • unnecessary_import
+

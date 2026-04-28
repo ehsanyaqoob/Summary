@@ -2,6 +2,7 @@
     
        <!-- 🌐 Internet Permission -->
     <uses-permission android:name="android.permission.INTERNET" />
+    
     <application
         android:label="ITP Dashboard"
         android:name="${applicationName}"

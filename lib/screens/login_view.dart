@@ -59,26 +59,26 @@ class _LoginViewState extends State<LoginView> {
               ),
               SizedBox(height: 12.h),
               Obx(
-  () => CustomTextFormField(
-    hint: 'Password',
-    controller: _passwordController,
-    inputType: TextInputType.visiblePassword,
-    isObscure: _loginController.visiblePassword.value,
-    suffix: Padding(
-      padding: const EdgeInsets.all(10.0),
-      child: GestureDetector(
-        onTap: _loginController.showHidePassword,
-        child: Icon(
-          _loginController.visiblePassword.value
-              ? Icons.visibility_off_sharp
-              : Icons.visibility,
-          color: Colors.black,
-          size: 24,
-        ),
-      ),
-    ),
-  ),
-),
+                () => CustomTextFormField(
+                  hint: 'Password',
+                  controller: _passwordController,
+                  inputType: TextInputType.visiblePassword,
+                  isObscure: _loginController.visiblePassword.value,
+                  suffix: Padding(
+                    padding: const EdgeInsets.all(10.0),
+                    child: GestureDetector(
+                      onTap: _loginController.showHidePassword,
+                      child: Icon(
+                        _loginController.visiblePassword.value
+                            ? Icons.visibility_off_sharp
+                            : Icons.visibility,
+                        color: Colors.black,
+                        size: 24,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
 
               SizedBox(height: 24.h),
               Obx(

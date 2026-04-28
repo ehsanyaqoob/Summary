@@ -14,3 +14,4 @@ void main() {
   Get.put(LoginController());
   runApp(AppView());
 }
+
