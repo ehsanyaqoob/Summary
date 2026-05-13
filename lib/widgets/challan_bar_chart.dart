@@ -4,7 +4,7 @@ import 'package:trafficlly/utills/export.dart';
 
 class ChallanBarChart extends StatelessWidget {
   final ChallanModel data;
-  final bool showAmount; 
+  final bool showAmount;
 
   const ChallanBarChart({
     required this.data,
@@ -14,9 +14,22 @@ class ChallanBarChart extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final double paidVal = showAmount
+        ? data.paidAmount
+        : data.paidTickets.toDouble();
+    final double unpaidVal = showAmount
+        ? data.unpaidAmount
+        : data.unpaidTickets.toDouble();
+
+    final double rawMax = showAmount
+        ? (data.fineAmount * 1.2)
+        : (data.eTicket * 1.2);
     final double maxValue = showAmount
-        ? (data.fineAmount * 1.2).clamp(1000.0, double.infinity)
-        : (data.eTicket * 1.2).clamp(10.0, double.infinity);
+        ? rawMax.clamp(1000.0, double.infinity)
+        : rawMax.clamp(10.0, double.infinity);
+
+    // Ensure interval is never zero or negative
+    final double gridInterval = maxValue > 0 ? maxValue / 5 : 1;
 
     // Color definitions based on your AppColors for Paid (Green/Lime) and Unpaid (Red/AppRed)
     final List<Color> paidGradientColors = [
@@ -39,9 +52,10 @@ class ChallanBarChart extends StatelessWidget {
         ),
         gridData: FlGridData(
           show: true,
-          drawVerticalLine: false, // Vertical lines are often redundant in bar charts
+          drawVerticalLine:
+              false, // Vertical lines are often redundant in bar charts
           drawHorizontalLine: true,
-          horizontalInterval: maxValue / 5,
+          horizontalInterval: gridInterval,
           getDrawingHorizontalLine: (value) => FlLine(
             color: AppColors.grey.withOpacity(0.15), // Lighter grid line
             strokeWidth: 1,
@@ -71,7 +85,7 @@ class ChallanBarChart extends StatelessWidget {
                   axisSide: meta.axisSide,
                   space: 8.0,
                   child: CustomText(
-                    text: label, 
+                    text: label,
                     fontSize: 12.sp,
                     fontWeight: FontWeight.w600,
                     color: AppColors.appBlack1,
@@ -83,7 +97,7 @@ class ChallanBarChart extends StatelessWidget {
           leftTitles: AxisTitles(
             sideTitles: SideTitles(
               showTitles: true,
-              interval: maxValue / 5,
+              interval: gridInterval,
               reservedSize: 50.w,
               getTitlesWidget: (value, meta) {
                 final String text = showAmount
@@ -94,9 +108,10 @@ class ChallanBarChart extends StatelessWidget {
                   axisSide: meta.axisSide,
                   space: 4.0,
                   child: CustomText(
-                    text: text, 
+                    text: text,
                     fontSize: 10.sp,
-                    color: AppColors.text, // Use a softer text color for axis labels
+                    color: AppColors
+                        .text, // Use a softer text color for axis labels
                   ),
                 );
               },
@@ -111,18 +126,21 @@ class ChallanBarChart extends StatelessWidget {
             x: 0,
             barRods: [
               BarChartRodData(
-                toY: showAmount ? data.paidAmount : data.paidTickets.toDouble(),
+                toY: paidVal,
                 gradient: LinearGradient(
                   colors: paidGradientColors,
                   begin: Alignment.topCenter,
                   end: Alignment.bottomCenter,
                 ),
-                borderRadius: BorderRadius.circular(6.w), // Rounded corners based on screen width
+                borderRadius: BorderRadius.circular(
+                  6.w,
+                ), // Rounded corners based on screen width
                 width: 28.w, // Wider bars for better visual weight
                 backDrawRodData: BackgroundBarChartRodData(
                   show: true,
                   toY: maxValue,
-                  color: AppColors.fieldColor, // Use a lighter background color for the back rod
+                  color: AppColors
+                      .fieldColor, // Use a lighter background color for the back rod
                 ),
               ),
             ],
@@ -132,7 +150,7 @@ class ChallanBarChart extends StatelessWidget {
             x: 1,
             barRods: [
               BarChartRodData(
-                toY: showAmount ? data.unpaidAmount : data.unpaidTickets.toDouble(),
+                toY: unpaidVal,
                 gradient: LinearGradient(
                   colors: unpaidGradientColors,
                   begin: Alignment.topCenter,

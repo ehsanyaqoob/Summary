@@ -1,5 +1,6 @@
 import 'package:flutter/services.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:shimmer/shimmer.dart';
 import 'package:trafficlly/utills/export.dart';
 import 'package:trafficlly/widgets/challan_analysis_section.dart';
 import 'package:trafficlly/widgets/challan_bar_chart.dart';
@@ -14,8 +15,12 @@ class HomeView extends StatefulWidget {
 
 class _HomeViewState extends State<HomeView> {
   final ChallanController challanController = Get.put(ChallanController());
-  final DrivingLicenceController dlController = Get.put(DrivingLicenceController());
-  final TotalDlAmountController dlAmountController = Get.put(TotalDlAmountController());
+  final DrivingLicenceController dlController = Get.put(
+    DrivingLicenceController(),
+  );
+  final TotalDlAmountController dlAmountController = Get.put(
+    TotalDlAmountController(),
+  );
   DateTime? _lastBackPressTime;
 
   @override
@@ -34,7 +39,9 @@ class _HomeViewState extends State<HomeView> {
 
   Future<bool> _onWillPop() async {
     final currentTime = DateTime.now();
-    if (_lastBackPressTime == null || currentTime.difference(_lastBackPressTime!) > const Duration(seconds: 2)) {
+    if (_lastBackPressTime == null ||
+        currentTime.difference(_lastBackPressTime!) >
+            const Duration(seconds: 2)) {
       _lastBackPressTime = currentTime;
       Fluttertoast.showToast(
         msg: "Press back again to exit app",
@@ -84,7 +91,9 @@ class _HomeViewState extends State<HomeView> {
           color: AppColors.primary,
           backgroundColor: AppColors.scaffoldBackgroundColor,
           child: SingleChildScrollView(
-            padding: const EdgeInsets.symmetric(horizontal: paddingHorizontal).copyWith(top: 0, bottom: 24.h),
+            padding: const EdgeInsets.symmetric(
+              horizontal: paddingHorizontal,
+            ).copyWith(top: 0, bottom: 24.h),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
@@ -97,7 +106,12 @@ class _HomeViewState extends State<HomeView> {
                 SizedBox(height: 10.h),
                 const SummaryCards(),
                 SizedBox(height: 20.h),
-                _analysisSection(challanController.challanData.value),
+                Obx(() {
+                  if (challanController.isLoading.value) {
+                    return _buildChartShimmer();
+                  }
+                  return _analysisSection(challanController.challanData.value);
+                }),
                 SizedBox(height: 20.h),
               ],
             ),
@@ -145,6 +159,71 @@ class _HomeViewState extends State<HomeView> {
       firstChart: ChallanBarChart(data: data, showAmount: true),
       secondChartTitle: "Amount Distribution",
       secondChart: ChallanPieChart(data: data, showAmount: true),
+    );
+  }
+
+  Widget _buildChartShimmer() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        // Title shimmer
+        Shimmer.fromColors(
+          baseColor: Colors.grey[300]!,
+          highlightColor: Colors.grey[100]!,
+          child: Container(
+            height: 20.h,
+            width: 160.w,
+            margin: EdgeInsets.symmetric(horizontal: 8.w),
+            decoration: BoxDecoration(
+              color: Colors.grey[300],
+              borderRadius: BorderRadius.circular(8.r),
+            ),
+          ),
+        ),
+        SizedBox(height: 16.h),
+        // First chart card shimmer
+        _buildChartCardShimmer(),
+        SizedBox(height: 20.h),
+        // Second chart card shimmer
+        _buildChartCardShimmer(),
+      ],
+    );
+  }
+
+  Widget _buildChartCardShimmer() {
+    return Shimmer.fromColors(
+      baseColor: Colors.grey[300]!,
+      highlightColor: Colors.grey[100]!,
+      child: Container(
+        width: double.infinity,
+        padding: EdgeInsets.all(20.w),
+        decoration: BoxDecoration(
+          color: Colors.grey[300],
+          borderRadius: BorderRadius.circular(20.r),
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Container(
+              height: 16.h,
+              width: 140.w,
+              decoration: BoxDecoration(
+                color: Colors.grey[400],
+                borderRadius: BorderRadius.circular(6.r),
+              ),
+            ),
+            SizedBox(height: 16.h),
+            Container(
+              height: 280.h,
+              width: double.infinity,
+              decoration: BoxDecoration(
+                color: Colors.grey[400],
+                borderRadius: BorderRadius.circular(12.r),
+              ),
+            ),
+          ],
+        ),
+      ),
     );
   }
 }
