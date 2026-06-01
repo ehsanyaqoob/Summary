@@ -40,11 +40,11 @@ class ChallanAnalysisSection extends StatelessWidget {
             ],
           ),
         ),
-        SizedBox(height: 16.h),
-        
+        SizedBox(height: 10.h),
+
         // First Chart Card
         _buildChartCard(firstChartTitle, firstChart),
-        SizedBox(height: 20.h),
+        SizedBox(height: 10.h),
 
         // Second Chart Card
         _buildChartCard(secondChartTitle, secondChart),
@@ -78,11 +78,7 @@ class ChallanAnalysisSection extends StatelessWidget {
             color: AppColors.appBlack1,
           ),
           SizedBox(height: 16.h),
-          SizedBox(
-            height: 280.h,
-            width: double.infinity,
-            child: chart,
-          ),
+          SizedBox(height: 200.h, width: double.infinity, child: chart),
         ],
       ),
     );

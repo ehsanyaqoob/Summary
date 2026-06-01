@@ -1,34 +1,33 @@
 import 'package:trafficlly/utills/export.dart';
 
-import 'custom_text_formfield.dart';
-
-
 class NPFBottomSheet extends StatelessWidget {
   String? title;
   List<String>? options;
 
-  NPFBottomSheet(
-      {super.key,
-      required this.title,
-      required this.options});
+  NPFBottomSheet({super.key, required this.title, required this.options});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(20), topRight: Radius.circular(20)),
-          color: Colors.white),
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
+        ),
+        color: Colors.white,
+      ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         mainAxisSize: MainAxisSize.min,
         children: [
           Container(
             decoration: BoxDecoration(
-                borderRadius: const BorderRadius.only(
-                    topLeft: Radius.circular(20),
-                    topRight: Radius.circular(20)),
-                color: AppColors.appPrimary),
+              borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(20),
+                topRight: Radius.circular(20),
+              ),
+              color: AppColors.appPrimary,
+            ),
             child: Padding(
               padding: const EdgeInsets.all(8.0),
               child: CustomText(
@@ -41,13 +40,18 @@ class NPFBottomSheet extends StatelessWidget {
             ),
           ),
           Flexible(
-              child: ListView(
-                  shrinkWrap: true,
-                  children: options!
-                      .map((item) => GestureDetector(
-                          onTap: () => Get.back(result: item),
-                          child: BottomSheetItem(title: item)))
-                      .toList()))
+            child: ListView(
+              shrinkWrap: true,
+              children: options!
+                  .map(
+                    (item) => GestureDetector(
+                      onTap: () => Get.back(result: item),
+                      child: BottomSheetItem(title: item),
+                    ),
+                  )
+                  .toList(),
+            ),
+          ),
         ],
       ),
     );

@@ -57,20 +57,14 @@ class DrivingLicenceController extends GetxController {
   Future<void> fetchLicenceDataWithDelay() async {
     isLoading.value = true;
     isInitialLoad.value = true;
-    await Future.wait([
-      _fetchApiData(),
-      Future.delayed(const Duration(seconds: 2)),
-    ]);
+    await _fetchApiData();
     isLoading.value = false;
     isInitialLoad.value = false;
   }
 
   Future<void> fetchLicenceDataOnFilter() async {
     isLoading.value = true;
-    await Future.wait([
-      _fetchApiData(),
-      Future.delayed(const Duration(seconds: 1)),
-    ]);
+    await _fetchApiData();
     isLoading.value = false;
   }
 
@@ -126,7 +120,6 @@ class TotalDlAmountController extends GetxController {
     isLoading.value = true;
     try {
       await _fetchApiData();
-      await Future.delayed(const Duration(seconds: 1));
     } catch (_) {}
     isLoading.value = false;
   }

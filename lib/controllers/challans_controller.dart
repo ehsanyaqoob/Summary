@@ -31,39 +31,41 @@ class ChallanController extends GetxController {
 
   Future<void> fetchChallanDataWithDelay() async {
     isLoading.value = true;
-    await Future.wait([
-      _fetchApiData(),
-      Future.delayed(const Duration(seconds: 2)),
-    ]);
+    await _fetchApiData();
     isLoading.value = false;
     isInitialLoad.value = false;
   }
 
   Future<void> fetchChallanDataOnFilter() async {
     isLoading.value = true;
-    await Future.wait([
-      _fetchApiData(),
-      Future.delayed(const Duration(seconds: 2)),
-    ]);
+    await _fetchApiData();
     isLoading.value = false;
   }
 
   Future<void> _fetchApiData() async {
-    final url = Uri.parse('https://traffic.islamabadpolice.gov.pk/v1/api/challan-summary');
+    final url = Uri.parse(
+      'https://traffic.islamabadpolice.gov.pk/v1/api/challan-summary',
+    );
 
     try {
       final HttpClient httpClient = HttpClient()
-        ..badCertificateCallback = (X509Certificate cert, String host, int port) => true;
+        ..badCertificateCallback =
+            (X509Certificate cert, String host, int port) => true;
       final IOClient ioClient = IOClient(httpClient);
 
-      final response = await ioClient.get(url).timeout(
-        const Duration(seconds: 8),
-        onTimeout: () => throw TimeoutException('API timed out'),
-      );
+      final response = await ioClient
+          .get(url)
+          .timeout(
+            const Duration(seconds: 8),
+            onTimeout: () => throw TimeoutException('API timed out'),
+          );
 
       if (response.statusCode == 200) {
         final Map<String, dynamic> jsonResponse = json.decode(response.body);
-        challanData.value = ChallanModel.fromJson(jsonResponse, selectedFilter.value);
+        challanData.value = ChallanModel.fromJson(
+          jsonResponse,
+          selectedFilter.value,
+        );
       }
     } catch (_) {}
   }

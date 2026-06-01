@@ -22,8 +22,7 @@ void startAnimation() async {
   await Future.delayed(const Duration(milliseconds: 300));
   showLogo.value = true;
 
-  // keep splash visible briefly
-  await Future.delayed(const Duration(seconds: 2));
+  // removed the 2 second delay for instant load
   navigateToNextScreen();
 }
 

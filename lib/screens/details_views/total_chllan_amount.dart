@@ -319,8 +319,18 @@ _buildAmountBreakdownItem(
               color: AppColors.appBlack1,
             ),
             SizedBox(height: 16.h),
-            ...['Daily', 'Weekly', 'Monthly', 'Yearly', 'Overall'].map((filter) => ListTile(
-                  leading: Icon(Icons.calendar_today_outlined, color: AppColors.primary),
+            ...['Daily', 'Weekly', 'Monthly', 'Yearly', 'Overall'].map((filter) {
+              IconData filterIcon;
+              switch (filter) {
+                case 'Daily': filterIcon = Icons.today; break;
+                case 'Weekly': filterIcon = Icons.date_range; break;
+                case 'Monthly': filterIcon = Icons.calendar_month; break;
+                case 'Yearly': filterIcon = Icons.calendar_view_month; break;
+                case 'Overall': filterIcon = Icons.all_inclusive; break;
+                default: filterIcon = Icons.calendar_today_outlined;
+              }
+              return ListTile(
+                  leading: Icon(filterIcon, color: AppColors.primary),
                   title: CustomText(
                     text: filter,
                     fontSize: 16.sp,
@@ -334,7 +344,8 @@ _buildAmountBreakdownItem(
                     Get.back();
                     _fetchData();
                   },
-                )),
+                );
+            }),
           ],
         ),
       ),
